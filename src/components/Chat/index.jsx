@@ -6,12 +6,14 @@ import * as C from "./style";
 
 const Chat = ({ userChat }) => {
   if (!userChat) return <Default />;
-  
+
+  const { photoURL, name, chatId } = userChat || {};
+
   return (
     <C.Container>
-      <ChatHeader photoURL={userChat?.photoURL} name={userChat?.name} />
-      <ChatBody chatId={userChat?.chatId} />
-      <ChatFooter chatId={userChat?.chatId} />
+      <ChatHeader photoURL={photoURL || ""} name={name || ""} />
+      <ChatBody chatId={chatId || ""} />
+      <ChatFooter chatId={chatId || ""} />
     </C.Container>
   );
 };

@@ -1,5 +1,5 @@
 import * as C from "./style";
-import { MdPerson, MdMoreVert, MdSearch } from "react-icons/md";
+import { MdPerson } from "react-icons/md";
 
 const ChatHeader = ({ photoURL, name }) => {
   return (
